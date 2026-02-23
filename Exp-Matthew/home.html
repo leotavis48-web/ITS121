@@ -1,108 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Eridu Supply</title>
-  </head>
-  <body>
-  
-     <div>
-	   <a href="/">Logo</a>
-     </div>
-	  
-     <nav>
-       <ul>
-		<li><a href="home.html">Home</a></li>
-		<li><a href="about.html">About Us</a></li>
-		<li><a href="shop.html">Shop</a></li>
-       </ul>
-      </nav>
-	  
-     <div>
-       <button>Sign in</button>
-       <button>Menu</button>
-     </div>
+    <title>Zenless Zone Zero - New Eridu Supply</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .zzz-header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        .zzz-header-nav nav {
+            flex: 1;
+        }
+
+        .zzz-header-nav nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .zzz-header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .zzz-main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .zzz-search-section {
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .zzz-featured-section {
+            display: flex;
+            gap: 20px;
+            min-height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .zzz-featured-article {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .zzz-featured-content {
+            flex: 1;
+        }
+
+        .zzz-featured-figure {
+            flex: 1;
+            border: 1px solid #000;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .zzz-featured-figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .zzz-carousel-section {
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .zzz-carousel-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .zzz-carousel-item {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .zzz-carousel-item img {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .zzz-search-section form {
+            width: 100%;
+        }
+
+        .zzz-search-section input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .zzz-search-section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .zzz-socials-section {
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .zzz-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .zzz-social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+        }
+
+        .zzz-social-icon a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+        }
+
+        .zzz-footer {
+            border: 1px solid #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .zzz-footer nav ul {
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .zzz-footer nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
 	
-    <main>
-	
-     <section>
-       <form role="search">
-         <label for="search">Search Bar</label>
-         <input 
-		 type="search" 
-		 id="search" 
-		 name="search" 
-		 placeholder="Search for products...">
-		  
-       </form>
-     </section>
-	  
-     <section>
-       <article>
-         <div>
-           <h1>Lorem Ipsum</h1>
-           <p>Lorem Ipsum Lorem Ipsum</p>
-           <button>Shop Now</button>
-         </div>
-		  
-         <figure>
-           <img src="image1.jpg" alt="Featured Kirkduct(Kirk is evil btw)">
-           <figcaption>Image 1</figcaption>
-         </figure>
-       </article>
-     </section>
-	  
-     <section>
-       <h2>Item Carousel</h2>
-		
-       <div>
-         <article>
-           <img src="item1.jpg" alt="Product 1">
-           <h3>Kirkduct 1</h3>
-         </article>
-		  
-         <article>
-           <img src="item2.jpg" alt="Product 2">
-           <h3>Kirkduct 2</h3>
-         </article>
-		  
-         <article>
-           <img src="item3.jpg" alt="Product 3">
-           <h3>Kirkduct 3</h3>
-         </article>
-		  
-         <article>
-           <img src="item4.jpg" alt="Product 4">
-           <h3>Kirkduct 4</h3>
-         </article>
-       </div>
-     </section>
-	  
-	 <p>Footer</p>
-	  
-     <aside>
-       <h2>Socials</h2>
-       <nav>
-         <ul>
-			 <li><a href="#">Twitter</a></li>
-             <li><a href="#">Youtube</a></li>
-             <li><a href="#">Tiktok</a></li>
-             <li><a href="#">Instagram</a></li>
-			 <li><a href="#">Facebook</a></li>
-			 <li><a href="#">HoYoLab</a></li>
-			 <li><a href="#">Twitch</a></li>
-			 <li><a href="#">Telegram</a></li>
-         </ul>
-       </nav>
-     </aside>
-	  
-	  
+</head>
+<body>
+    <div class="zzz-header-nav">
+        <div>
+            <a href="/">Logo</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+        <div class="zzz-header-actions">
+            <button>Sign in</button>
+            <button>Menu</button>
+        </div>
+    </div>
+
+    <main class="zzz-main">
+        <section class="zzz-search-section">
+            <form role="search">
+                <label for="search">Search Bar</label>
+                <input type="search" id="search" name="search" placeholder="Search for products...">
+            </form>
+        </section>
+
+        <section class="zzz-featured-section">
+            <article class="zzz-featured-article">
+                <div class="zzz-featured-content">
+                    <h1>Lorem Ipsum</h1>
+                    <p>Lorem Ipsum Lorem Ipsum</p>
+                    <button>Shop Now</button>
+                </div>
+                <figure class="zzz-featured-figure">
+                    <img src="placeholder-image-1.jpg" alt="Featured Product">
+                    <figcaption>Image 1</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section class="zzz-carousel-section">
+            <h2>Item Carousel</h2>
+            <div class="zzz-carousel-grid">
+                <article class="zzz-carousel-item">
+                    <img src="placeholder-item-1.jpg" alt="Product 1">
+                    <h3>KirkDuct 1</h3>
+                </article>
+                <article class="zzz-carousel-item">
+                    <img src="placeholder-item-2.jpg" alt="Product 2">
+                    <h3>KirkDuct 2</h3>
+                </article>
+                <article class="zzz-carousel-item">
+                    <img src="placeholder-item-3.jpg" alt="Product 3">
+                    <h3>KirkDuct 3</h3>
+                </article>
+                <article class="zzz-carousel-item">
+                    <img src="placeholder-item-4.jpg" alt="Product 4">
+                    <h3>KirkDuct 4</h3>
+                </article>
+            </div>
+        </section>
+
+        <aside class="zzz-socials-section">
+            <h2>Socials</h2>
+            <div class="zzz-social-icons">
+                <div class="zzz-social-icon">
+                    <a href="#" title="Twitter">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="YouTube">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="TikTok">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="Discord">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="Instagram">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="Facebook">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="HoYoLab">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="Twitch">?</a>
+                </div>
+                <div class="zzz-social-icon">
+                    <a href="#" title="Telegram">?</a>
+                </div>
+            </div>
+        </aside>
     </main>
-	
-  </body>
+
+    <div class="zzz-footer">
+        <p>Footer</p>
+    </div>
+</body>
 </html>
-
-
-
-
