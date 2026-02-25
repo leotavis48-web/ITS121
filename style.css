@@ -11,7 +11,7 @@
     transform: translateY(25%);
 }
 .zzz-hbtn {
-    background-color: black !important;
+    background-color: black;
     color: white !important;
     border-radius: 20px;
     border: 1px solid black;
@@ -21,7 +21,28 @@
     display: inline-block !important;
 }
 
+.zzz-hbtn:active {
+    background-color: white ;
+}
+
 .zzz-hbtn:hover {
     background-color: white !important;
     color: black !important;
+}
+
+.zzz-footer {
+    background-color: #000;
+}
+
+.zzz-social {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.zzz-social:hover {
+    color: #fff;
+    text-shadow: 0 0 8px white;
 }
