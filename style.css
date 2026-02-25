@@ -1,12 +1,27 @@
-.custom-navbar {
-background-color: #000000;
+.zzz-navbar {
+    background-color: #000000;
 }
-.nav-links-lower {
-margin-top: 5%px;
+.zzz-nav-links-lower {
+    margin-top: 5%px;
 }
        
-.logo-img {
+.zzz-img {
     height: 80px;
     display: block;
     transform: translateY(25%);
+}
+.zzz-hbtn {
+    background-color: black !important;
+    color: white !important;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: all 0.5s ease;
+    padding: 8px 32px !important;
+    text-align: center;
+    display: inline-block !important;
+}
+
+.zzz-hbtn:hover {
+    background-color: white !important;
+    color: black !important;
 }
