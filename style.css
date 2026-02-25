@@ -1,0 +1,12 @@
+.custom-navbar {
+background-color: #000000;
+}
+.nav-links-lower {
+margin-top: 5%px;
+}
+       
+.logo-img {
+    height: 80px;
+    display: block;
+    transform: translateY(25%);
+}
