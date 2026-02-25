@@ -99,6 +99,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 100px;
+    padding: 12px;
+    border: 1px solid black;
 }
 
 /* Search Section */
@@ -241,4 +243,36 @@ body {
 .zzz-section-split {
     border-top: 1px solid #000;
     padding-top: 30px;
+}
+
+/* img hover */
+.zzz-k-img-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.zzz-k-img-bottom,
+.zzz-k-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+.zzz-k-img-top {
+    opacity: 0;
+}
+
+.zzz-k-img-container:hover .zzz-k-img-top {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.zzz-k-img-container:hover .zzz-k-img-bottom {
+    opacity: 0;
 }
