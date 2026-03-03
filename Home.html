@@ -5,10 +5,10 @@
     <title>Bootstrap Header</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="style.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark zzz-navbar fixed-top">
@@ -73,23 +73,49 @@
 
         <section class="zzz-carousel-section">
             <h2>Item Carousel</h2>
-            <div class="zzz-carousel-grid">
-                <article class="zzz-carousel-item">
-                    <img src="placeholder-item-1.jpg" alt="Product 1">
-                    <h3>EvilMatthew 1</h3>
-                </article>
-                <article class="zzz-carousel-item">
-                    <img src="placeholder-item-2.jpg" alt="Product 2">
-                    <h3>EvilMatthew 2</h3>
-                </article>
-                <article class="zzz-carousel-item">
-                    <img src="placeholder-item-3.jpg" alt="Product 3">
-                    <h3>EvilMatthew 3</h3>
-                </article>
-                <article class="zzz-carousel-item">
-                    <img src="placeholder-item-4.jpg" alt="Product 4">
-                    <h3>EvilMatthew 4</h3>
-                </article>
+            
+            <div class="zzz-carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn">Prev</button>
+                
+                <div class="zzz-carousel-viewport">
+                    <div class="zzz-carousel-track" id="carouselTrack">
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-1.jpg" alt="Product 1">
+                            <h3>KirkDuct 1</h3>
+                        </article>
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-2.jpg" alt="Product 2">
+                            <h3>KirkDuct 2</h3>
+                        </article>
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-3.jpg" alt="Product 3">
+                            <h3>KirkDuct 3</h3>
+                        </article>
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-4.jpg" alt="Product 4">
+                            <h3>KirkDuct 4</h3>
+                        </article>
+                        
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-5.jpg" alt="Product 5">
+                            <h3>KirkDuct 5</h3>
+                        </article>
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-6.jpg" alt="Product 6">
+                            <h3>KirkDuct 6</h3>
+                        </article>
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-7.jpg" alt="Product 7">
+                            <h3>KirkDuct 7</h3>
+                        </article>
+                        <article class="zzz-carousel-item">
+                            <img src="placeholder-item-8.jpg" alt="Product 8">
+                            <h3>KirkDuct 8</h3>
+                        </article>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn">Next</button>
             </div>
         </section>
     </main>
@@ -107,4 +133,5 @@
 </footer>
 
 </body>
+    <script src="script.js"></script>
 </html>
