@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Order Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --zzz-primary-orange: #e6874e;
+            --zzz-light-gray: #f5f5f5;
+            --zzz-dark-gray: #666;
+            --zzz-text-color: #333;
+            --zzz-border-color: #ddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: var(--zzz-text-color);
+            overflow-x: hidden;
+        }
+
+        .zzz-cart-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .zzz-cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--zzz-border-color);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .zzz-cart-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--zzz-dark-gray);
+        }
+
+        .zzz-cart-summary {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .zzz-summary-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .zzz-summary-label {
+            font-size: 0.875rem;
+            color: var(--zzz-dark-gray);
+            margin-bottom: 0.25rem;
+        }
+
+        .zzz-summary-value {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--zzz-primary-orange);
+        }
+
+        .zzz-checkout-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .zzz-checkout-button {
+            background-color: var(--zzz-primary-orange);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .zzz-checkout-button:hover {
+            background-color: #d67940;
+            transform: translateY(-2px);
+        }
+
+        .zzz-cart-items {
+            margin-bottom: 3rem;
+        }
+
+        .zzz-cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--zzz-border-color);
+            align-items: center;
+        }
+
+        .zzz-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid var(--zzz-border-color);
+        }
+
+        .zzz-item-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .zzz-item-name {
+            font-size: 0.95rem;
+            color: var(--zzz-text-color);
+            margin: 0;
+        }
+
+        .zzz-item-meta {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .zzz-meta-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zzz-meta-label {
+            font-size: 0.75rem;
+            color: var(--zzz-dark-gray);
+        }
+
+        .zzz-meta-value {
+            font-size: 0.875rem;
+            color: var(--zzz-text-color);
+        }
+
+        .zzz-item-price {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: var(--zzz-primary-orange);
+        }
+
+        .zzz-item-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .zzz-quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid var(--zzz-border-color);
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        .zzz-quantity-label {
+            font-size: 0.875rem;
+            color: var(--zzz-dark-gray);
+        }
+
+        .zzz-quantity-value {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .zzz-action-button {
+            padding: 0.25rem 0.75rem;
+            border: 1px solid var(--zzz-border-color);
+            background-color: white;
+            color: var(--zzz-text-color);
+            font-size: 0.875rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .zzz-action-button:hover {
+            background-color: var(--zzz-light-gray);
+        }
+
+        .zzz-recommendations-section {
+            margin-top: 3rem;
+        }
+
+        .zzz-section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--zzz-dark-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .zzz-product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 1.5rem;
+        }
+
+        .zzz-product-card {
+            background-color: white;
+            border: 1px solid var(--zzz-border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .zzz-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .zzz-product-image-wrapper {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            background-color: var(--zzz-light-gray);
+            position: relative;
+        }
+
+        .zzz-product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .zzz-product-info {
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .zzz-product-name {
+            font-size: 0.875rem;
+            color: var(--zzz-text-color);
+            margin: 0;
+            height: 3em;
+            overflow: hidden;
+            line-height: 1.5em;
+        }
+
+        .zzz-product-price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--zzz-primary-orange);
+        }
+
+        .zzz-currency {
+            font-size: 0.75rem;
+            font-weight: normal;
+        }
+
+        .zzz-nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--zzz-border-color);
+            flex-wrap: wrap;
+        }
+
+        .zzz-nav-tab {
+            padding: 0.75rem 1.5rem;
+            background-color: transparent;
+            border: none;
+            color: var(--zzz-dark-gray);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .zzz-nav-tab:hover {
+            color: var(--zzz-primary-orange);
+        }
+
+        .zzz-nav-tab.active {
+            color: var(--zzz-primary-orange);
+            border-bottom-color: var(--zzz-primary-orange);
+        }
+
+        .zzz-tab-content {
+            display: none;
+        }
+
+        .zzz-tab-content.active {
+            display: block;
+        }
+
+        .zzz-order-card {
+            border: 1px solid var(--zzz-border-color);
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: var(--zzz-light-gray);
+        }
+
+        .zzz-order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .zzz-order-id {
+            font-weight: bold;
+            color: var(--zzz-text-color);
+        }
+
+        .zzz-order-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .zzz-status-confirmed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .zzz-status-shipped {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .zzz-status-delivered {
+            background-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .zzz-status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .zzz-order-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .zzz-detail-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zzz-detail-label {
+            font-size: 0.75rem;
+            color: var(--zzz-dark-gray);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .zzz-detail-value {
+            font-size: 0.95rem;
+            color: var(--zzz-text-color);
+            font-weight: 500;
+        }
+
+        .zzz-order-items {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .zzz-order-item-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--zzz-border-color);
+        }
+
+        .zzz-order-item-row:last-child {
+            border-bottom: none;
+        }
+
+        .zzz-order-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .zzz-action-link-button {
+            padding: 0.5rem 1rem;
+            background-color: var(--zzz-primary-orange);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .zzz-action-link-button:hover {
+            background-color: #d67940;
+        }
+
+        .zzz-action-link-button.secondary {
+            background-color: white;
+            color: var(--zzz-primary-orange);
+            border: 1px solid var(--zzz-primary-orange);
+        }
+
+        .zzz-action-link-button.secondary:hover {
+            background-color: var(--zzz-light-gray);
+        }
+
+        .zzz-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .zzz-timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .zzz-timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--zzz-primary-orange);
+            border: 2px solid white;
+        }
+
+        .zzz-timeline-item.completed::before {
+            background-color: #28a745;
+        }
+
+        .zzz-timeline-title {
+            font-weight: bold;
+            color: var(--zzz-text-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .zzz-timeline-date {
+            font-size: 0.875rem;
+            color: var(--zzz-dark-gray);
+        }
+
+        .zzz-policy-content {
+            line-height: 1.6;
+            color: var(--zzz-text-color);
+        }
+
+        .zzz-policy-section {
+            margin-bottom: 2rem;
+        }
+
+        .zzz-policy-section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--zzz-text-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .zzz-policy-section p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .zzz-policy-list {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .zzz-policy-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .zzz-empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--zzz-dark-gray);
+        }
+
+        .zzz-empty-state p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .zzz-cart-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .zzz-cart-summary {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .zzz-cart-item {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+
+            .zzz-item-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            .zzz-item-price {
+                grid-column: 2;
+                justify-self: end;
+            }
+
+            .zzz-product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-gap: 1rem;
+            }
+
+            .zzz-product-image-wrapper {
+                height: 140px;
+            }
+
+            .zzz-checkout-button {
+                width: 100%;
+            }
+
+            .zzz-nav-tabs {
+                gap: 0.25rem;
+            }
+
+            .zzz-nav-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .zzz-order-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .zzz-product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="zzz-cart-container">
+        <nav class="zzz-nav-tabs" role="tablist">
+            <button class="zzz-nav-tab active" data-tab="shopping-cart">Shopping Cart</button>
+            <button class="zzz-nav-tab" data-tab="order-confirmation">Order Confirmation</button>
+            <button class="zzz-nav-tab" data-tab="order-tracking">Order Tracking</button>
+            <button class="zzz-nav-tab" data-tab="order-history">Order History</button>
+            <button class="zzz-nav-tab" data-tab="modify-cancel">Modify / Cancel Orders</button>
+            <button class="zzz-nav-tab" data-tab="returns-refund">Returns & Refund</button>
+        </nav>
+
+        <section class="zzz-tab-content active" id="shopping-cart">
+        <section class="zzz-cart-section">
+            <div class="zzz-cart-header">
+                <h1 class="zzz-cart-title">Shopping Cart</h1>
+                <div class="zzz-cart-summary">
+                    <div class="zzz-summary-item">
+                        <span class="zzz-summary-label">Total Quantity</span>
+                        <span class="zzz-summary-value">2</span>
+                    </div>
+                    <div class="zzz-summary-item">
+                        <span class="zzz-summary-label">Merchandise Total</span>
+                        <span class="zzz-summary-value">40,670 <span class="zzz-currency">JPY</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zzz-checkout-section">
+                <button class="zzz-checkout-button">🛒 Proceed to Checkout</button>
+            </div>
+
+            <div class="zzz-cart-items">
+                <article class="zzz-cart-item">
+                    <img src="https://img.amiami.com/images/product/main/261/FIGURE-197897.jpg" alt="Zenless Zone Zero Figure" class="zzz-item-image">
+                    <div class="zzz-item-details">
+                        <h3 class="zzz-item-name">[Bonus] Zenless Zone Zero Hoshimi Miyabi: Honed Blade of Reflection Ver. 1/7 Complete Figure(Pre-order)</h3>
+                        <div class="zzz-item-meta">
+                            <div class="zzz-meta-group">
+                                <span class="zzz-meta-label">Release Date</span>
+                                <span class="zzz-meta-value">Feb-2027</span>
+                            </div>
+                            <div class="zzz-meta-group">
+                                <span class="zzz-meta-label">Unit Price</span>
+                                <span class="zzz-item-price">38,870 <span class="zzz-currency">JPY</span></span>
+                            </div>
+                        </div>
+                        <div class="zzz-item-actions">
+                            <div class="zzz-quantity-selector">
+                                <span class="zzz-quantity-label">Qty:</span>
+                                <span class="zzz-quantity-value">1</span>
+                            </div>
+                            <button class="zzz-action-button">Delete</button>
+                            <button class="zzz-action-button">Save for later</button>
+                            <button class="zzz-action-button">Add to Bookmarks</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="zzz-cart-item">
+                    <img src="https://img.amiami.com/images/product/main/261/FIGURE-198081.jpg" alt="Anby Demara Figure" class="zzz-item-image">
+                    <div class="zzz-item-details">
+                        <h3 class="zzz-item-name">HELLO! GOOD SMILE Zenless Zone Zero Anby Demara Posable Figure(Pre-order)</h3>
+                        <div class="zzz-item-meta">
+                            <div class="zzz-meta-group">
+                                <span class="zzz-meta-label">Release Date</span>
+                                <span class="zzz-meta-value">Aug-2026</span>
+                            </div>
+                            <div class="zzz-meta-group">
+                                <span class="zzz-meta-label">Unit Price</span>
+                                <span class="zzz-item-price">1,800 <span class="zzz-currency">JPY</span></span>
+                            </div>
+                        </div>
+                        <div class="zzz-item-actions">
+                            <div class="zzz-quantity-selector">
+                                <span class="zzz-quantity-label">Qty:</span>
+                                <span class="zzz-quantity-value">1</span>
+                            </div>
+                            <button class="zzz-action-button">Delete</button>
+                            <button class="zzz-action-button">Save for later</button>
+                            <button class="zzz-action-button">Add to Bookmarks</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="zzz-recommendations-section">
+            <h2 class="zzz-section-title">Customers Also Bought</h2>
+            <div class="zzz-product-grid">
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-197898.jpg" alt="Product 1" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Evelyn Chevalier 1/7 Complete Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">25,060 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-198226.jpg" alt="Product 2" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Nendoroid Zenless Zone Zero Hugo Vlad(Pre-order)</h3>
+                        <p class="zzz-product-price">1,900 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-198080.jpg" alt="Product 3" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">HELLO! GOOD SMILE Zenless Zone Zero Nicole Demara Posable Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">25,980 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/243/FIGURE-175711.jpg" alt="Product 4" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Nicole Demara 1/7 Complete Figure(Released)</h3>
+                        <p class="zzz-product-price">28,210 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-198082.jpg" alt="Product 5" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">HELLO! GOOD SMILE Zenless Zone Zero Nekomiya Mana Posable Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">22,630 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/251/FIGURE-183217.jpg" alt="Product 6" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Corin Wickes 1/7 Complete Figure(Released)</h3>
+                        <p class="zzz-product-price">25,900 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/254/FIGURE-196338.jpg" alt="Product 7" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Gift+ Zenless Zone Zero Asaba Harumasa Sparkling Wonderland Ver. 1/8 Complete Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">1,800 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/252/FIGURE-187260.jpg" alt="Product 8" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Nendoroid Zenless Zone Zero Von Lycaon(Pre-order)</h3>
+                        <p class="zzz-product-price">5,980 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-196695.jpg" alt="Product 9" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Nendoroid Zenless Zone Zero Seth Lowell(Pre-order)</h3>
+                        <p class="zzz-product-price">5,850 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/244/FIGURE-179736.jpg" alt="Product 10" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Nekomiya Mana 1/7 Complete Figure(Released)</h3>
+                        <p class="zzz-product-price">27,500 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        </section>
+
+        <section class="zzz-tab-content" id="order-confirmation">
+            <div class="zzz-order-card">
+                <div class="zzz-order-header">
+                    <span class="zzz-order-id">Order #ORD-2024-001234</span>
+                    <span class="zzz-order-status zzz-status-confirmed">CONFIRMED</span>
+                </div>
+                <div class="zzz-order-details">
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Order Date</span>
+                        <span class="zzz-detail-value">Mar 03, 2026</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Total Amount</span>
+                        <span class="zzz-detail-value">40,670 JPY</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Delivery Address</span>
+                        <span class="zzz-detail-value">123 Main St, Kirk Residence</span>
+                    </div>
+                </div>
+                <div class="zzz-order-items">
+                    <h4 style="margin-bottom: 1rem;">Order Items</h4>
+                    <div class="zzz-order-item-row">
+                        <span>[Bonus] Zenless Zone Zero Hoshimi Miyabi (Qty: 1)</span>
+                        <span style="font-weight: bold;">38,870 JPY</span>
+                    </div>
+                    <div class="zzz-order-item-row">
+                        <span>HELLO! GOOD SMILE Zenless Zone Zero Anby Demara (Qty: 1)</span>
+                        <span style="font-weight: bold;">1,800 JPY</span>
+                    </div>
+                </div>
+                <p style="margin: 0; font-size: 0.875rem; color: var(--zzz-dark-gray);">A confirmation email has been sent to your registered email address.</p>
+            </div>
+        </section>
+
+        <section class="zzz-tab-content" id="order-tracking">
+            <div class="zzz-order-card">
+                <div class="zzz-order-header">
+                    <span class="zzz-order-id">Order #ORD-2024-001234</span>
+                    <span class="zzz-order-status zzz-status-shipped">IN TRANSIT</span>
+                </div>
+                <div class="zzz-order-details">
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Tracking Number</span>
+                        <span class="zzz-detail-value">CN1234567890</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Carrier</span>
+                        <span class="zzz-detail-value">China Post</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Estimated Delivery</span>
+                        <span class="zzz-detail-value">Mar 10, 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Shipment Progress</h3>
+            <div class="zzz-timeline">
+                <div class="zzz-timeline-item completed">
+                    <div class="zzz-timeline-title">Order Confirmed</div>
+                    <div class="zzz-timeline-date">Mar 03, 2026 10:30 AM</div>
+                </div>
+                <div class="zzz-timeline-item completed">
+                    <div class="zzz-timeline-title">Processing</div>
+                    <div class="zzz-timeline-date">Mar 04, 2026 2:15 PM</div>
+                </div>
+                <div class="zzz-timeline-item completed">
+                    <div class="zzz-timeline-title">Shipped</div>
+                    <div class="zzz-timeline-date">Mar 05, 2026 9:00 AM</div>
+                </div>
+                <div class="zzz-timeline-item">
+                    <div class="zzz-timeline-title">In Transit</div>
+                    <div class="zzz-timeline-date">Estimated delivery Mar 10, 2026</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="zzz-tab-content" id="order-history">
+            <div class="zzz-order-card">
+                <div class="zzz-order-header">
+                    <span class="zzz-order-id">Order #ORD-2024-001234</span>
+                    <span class="zzz-order-status zzz-status-shipped">IN TRANSIT</span>
+                </div>
+                <div class="zzz-order-details">
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Order Date</span>
+                        <span class="zzz-detail-value">Mar 03, 2026</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Total</span>
+                        <span class="zzz-detail-value">40,670 JPY</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Items</span>
+                        <span class="zzz-detail-value">2 items</span>
+                    </div>
+                </div>
+                <div class="zzz-order-actions">
+                    <button class="zzz-action-link-button">View Details</button>
+                    <button class="zzz-action-link-button secondary">Track Order</button>
+                </div>
+            </div>
+
+            <div class="zzz-order-card">
+                <div class="zzz-order-header">
+                    <span class="zzz-order-id">Order #ORD-2024-001000</span>
+                    <span class="zzz-order-status zzz-status-delivered">DELIVERED</span>
+                </div>
+                <div class="zzz-order-details">
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Order Date</span>
+                        <span class="zzz-detail-value">Feb 15, 2026</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Total</span>
+                        <span class="zzz-detail-value">25,500 JPY</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Items</span>
+                        <span class="zzz-detail-value">1 item</span>
+                    </div>
+                </div>
+                <div class="zzz-order-actions">
+                    <button class="zzz-action-link-button">View Details</button>
+                    <button class="zzz-action-link-button secondary">Reorder</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="zzz-tab-content" id="modify-cancel">
+            <div class="zzz-order-card">
+                <div class="zzz-order-header">
+                    <span class="zzz-order-id">Order #ORD-2024-001234</span>
+                    <span class="zzz-order-status zzz-status-pending">PENDING SHIPMENT</span>
+                </div>
+                <div class="zzz-order-details">
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Order Date</span>
+                        <span class="zzz-detail-value">Mar 03, 2026</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Total</span>
+                        <span class="zzz-detail-value">40,670 JPY</span>
+                    </div>
+                    <div class="zzz-detail-group">
+                        <span class="zzz-detail-label">Status</span>
+                        <span class="zzz-detail-value">Can be modified until shipment</span>
+                    </div>
+                </div>
+                <p style="margin: 1rem 0; font-size: 0.95rem; color: var(--zzz-text-color);">Modifications allowed until shipment begins. Once shipped, you cannot modify or cancel this order.</p>
+                <div class="zzz-order-actions">
+                    <button class="zzz-action-link-button">Modify Order</button>
+                    <button class="zzz-action-link-button secondary">Cancel Order</button>
+                </div>
+            </div>
+
+            <div class="zzz-empty-state">
+                <p>No other pending orders available for modification.</p>
+            </div>
+        </section>
+
+        <section class="zzz-tab-content" id="returns-refund">
+            <div class="zzz-policy-content">
+                <div class="zzz-policy-section">
+                    <h3>Return Policy</h3>
+                    <p>We want you to be completely satisfied with your purchase. If you're not happy with your order, we accept returns within 30 days of delivery.</p>
+                    <ul class="zzz-policy-list">
+                        <li>Kirk is bad</li>
+                        <li>Kirk is defective</li>
+                        <li>Kirk is Evil</li>
+                        <li>Kirk is Kirk</li>
+                    </ul>
+                </div>
+
+                <div class="zzz-policy-section">
+                    <h3>Refund Policy</h3>
+                    <p>Once we receive and inspect your returned item, we will process your refund within 5-7 business days.</p>
+                    <ul class="zzz-policy-list">
+                        <li>Kirk is bad</li>
+                        <li>Kirk is non-refundable</li>
+                        <li>Kirk is defective</li>
+                        <li>Don't refund your kirk</li>
+                    </ul>
+                </div>
+
+                <div class="zzz-policy-section">
+                    <h3>How to Request a Return</h3>
+                    <p>To initiate a return:</p>
+                    <ul class="zzz-policy-list">
+                        <li>Contact Kirk</li>
+                        <li>Receive Kirk</li>
+                        <li>Package the Kirk</li>
+                        <li>Your Kirk will be processed upon receipt and inspection</li>
+                    </ul>
+                </div>
+
+                <div class="zzz-policy-section">
+                    <h3>Defective Items</h3>
+                    <p>If you receive a defective kirk, we will provide a full refund including return your kirk at no cost to you. Please contact us immediately with photos of Kirk.</p>
+                </div>
+
+                <div class="zzz-policy-section">
+                    <h3>Contact Customer Service</h3>
+                    <p><strong>Email:</strong> support@store.com<br><strong>Phone:</strong> +81-3-XXXX-XXXX<br><strong>Business Hours:</strong> Monday - Friday, 10:00 AM - 6:00 PM JST</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tabs = document.querySelectorAll('.zzz-nav-tab');
+        const contents = document.querySelectorAll('.zzz-tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
