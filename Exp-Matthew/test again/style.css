@@ -1,1 +1,1059 @@
-idk bro
+/* Import Oswald Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px;
+    margin: 0;
+    background-color: #0a0a0a;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+/* Navbar */
+.zzz-navbar {
+    background-color: #000000;
+}
+
+.zzz-nav-links-lower {
+    margin-top: 5%;
+}
+
+.zzz-img {
+    height: 80px;
+    display: block;
+    transform: translateY(25%);
+}
+
+.zzz-hbtn {
+    background-color: black;
+    color: white !important;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: all 0.5s ease;
+    padding: 8px 32px !important;
+    text-align: center;
+    display: inline-block !important;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.zzz-hbtn:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.zzz-hbtn:active {
+    background-color: white;
+}
+
+.zzz-footer {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-social {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-social:hover {
+    color: #fff;
+    text-shadow: 0 0 8px white;
+}
+
+/* Header layout */
+.zzz-header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-header-nav nav {
+    flex: 1;
+}
+
+.zzz-header-nav nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.zzz-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Main content */
+.zzz-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding: 12px;
+    border: 1px solid black;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Search Section */
+.zzz-search-section {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-search-section form {
+    width: 100%;
+}
+
+.zzz-search-section input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-search-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Featured Section */
+.zzz-featured-section {
+    display: flex;
+    gap: 20px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-featured-article {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    border: 1px solid #000;
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-featured-content {
+    flex: 1;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-featured-figure {
+    flex: 1;
+    border: 1px solid #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-featured-figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+.zzz-carousel-section {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-carousel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.zzz-carousel-item {
+    border: 1px solid #000;
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-carousel-item img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* About us */
+.zzz-main-frame {
+    border: 1px solid #000;
+    padding: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-page-heading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-split-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-image-placeholder {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.main-img {
+    width: 250px;
+    height: 250px;
+}
+
+.secondary-img {
+    width: 400px;
+    height: 200px;
+    position: relative;
+}
+
+.zzz-text-content {
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-game-button {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border: 1px solid #000;
+    background: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-section-split {
+    border-top: 1px solid #000;
+    padding-top: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* img hover */
+.zzz-k-img-container {
+    position: relative;
+    width: 300px;
+}
+
+.zzz-k-img-bottom,
+.zzz-k-img-top {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.zzz-k-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.zzz-k-img-container:hover .zzz-k-img-top {
+    opacity: 1;
+}
+
+/* Shop */
+.zzz-recommended-section {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.zzz-recommended-item {
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-recommended-item img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- BASE BUTTON STYLES --- */
+.zzz-Mbtn {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.1s ease;
+    user-select: none;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* --- VIEW BUTTON (Cyan/Tech) --- */
+.btn-view {
+    background-color: #00E5FF;
+    color: #000;
+    transform: skew(-10deg);
+    box-shadow: 6px 6px 0px #000;
+    border: 2px solid #000;
+}
+
+.btn-view::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform: skew(-10deg) translate(4px, 4px);
+    z-index: -1;
+}
+
+.btn-view:hover {
+    transform: skew(-10deg) translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #000;
+}
+
+.btn-view:active {
+    transform: skew(-10deg) translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+/* --- DOWNLOAD NOW BUTTON (Yellow/Action) --- */
+.btn-download {
+    background-color: #F2D600;
+    color: #000;
+    transform: skew(-15deg);
+    box-shadow: 8px 8px 0px #000;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+.btn-download::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    animation: download-glitch 0.3s infinite;
+}
+
+.btn-download:hover::after {
+    left: 100%;
+}
+
+.btn-download:active {
+    transform: skew(-15deg) translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+@keyframes download-glitch {
+    0% { transform: skew(-15deg) translate(0, 0); }
+    20% { transform: skew(-15deg) translate(-2px, 2px); }
+    40% { transform: skew(-15deg) translate(-2px, -2px); }
+    60% { transform: skew(-15deg) translate(2px, 2px); }
+    80% { transform: skew(-15deg) translate(2px, -2px); }
+    100% { transform: skew(-15deg) translate(0, 0); }
+}
+
+/* --- SHOP BUTTON (Pink/Urgent) --- */
+.btn-shop {
+    background-color: #FF0055;
+    color: #fff;
+    transform: skew(-10deg);
+    box-shadow: 6px 6px 0px #000;
+    border: 2px solid #000;
+}
+
+.btn-shop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform: skew(-10deg) translate(4px, 4px);
+    z-index: -1;
+}
+
+.btn-shop:hover {
+    transform: skew(-10deg) translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #000;
+    animation: shop-pulse 0.3s infinite;
+}
+
+.btn-shop:active {
+    transform: skew(-10deg) translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+@keyframes shop-pulse {
+    0% { transform: skew(-10deg) translate(-2px, -2px); }
+    50% { transform: skew(-10deg) translate(2px, 2px); }
+    100% { transform: skew(-10deg) translate(-2px, -2px); }
+}
+
+/* --- LABELS --- */
+.button-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* ORDER PAGE SPECIFIC STYLES */
+.zzz-cart-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #0a0a0a;
+}
+
+.zzz-nav-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #fff;
+    flex-wrap: wrap;
+}
+
+.zzz-nav-tab {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.zzz-nav-tab:hover {
+    color: #00E5FF;
+    background-color: rgba(0, 229, 255, 0.1);
+}
+
+.zzz-nav-tab.active {
+    color: #F2D600;
+    border-bottom-color: #F2D600;
+    background-color: rgba(242, 214, 0, 0.1);
+}
+
+.zzz-tab-content {
+    display: none;
+}
+
+.zzz-tab-content.active {
+    display: block;
+}
+
+.zzz-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.zzz-cart-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.zzz-cart-summary {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.zzz-summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.zzz-summary-label {
+    font-size: 0.875rem;
+    color: #aaa;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.zzz-summary-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F2D600;
+}
+
+.zzz-checkout-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.zzz-checkout-button {
+    background-color: #FF0055;
+    color: white;
+    border: 2px solid #000;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: skew(-10deg);
+    box-shadow: 6px 6px 0px #000;
+}
+
+.zzz-checkout-button:hover {
+    transform: skew(-10deg) translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #000;
+    animation: shop-pulse 0.3s infinite;
+}
+
+.zzz-checkout-button:active {
+    transform: skew(-10deg) translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+.zzz-cart-items {
+    margin-bottom: 3rem;
+}
+
+.zzz-cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 2px solid #fff;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zzz-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.zzz-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.zzz-item-name {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+}
+
+.zzz-item-meta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.zzz-meta-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.zzz-meta-label {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.zzz-meta-value {
+    font-size: 0.875rem;
+    color: #fff;
+}
+
+.zzz-item-price {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #F2D600;
+}
+
+.zzz-currency {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.zzz-item-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.zzz-quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.zzz-quantity-label {
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+.zzz-quantity-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.zzz-action-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.zzz-action-button:hover {
+    background-color: #00E5FF;
+    color: #000;
+}
+
+.zzz-recommendations-section {
+    margin-top: 3rem;
+    border: 2px solid #fff;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zzz-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.zzz-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.zzz-product-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #fff;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.zzz-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 229, 255, 0.5);
+    border-color: #00E5FF;
+}
+
+.zzz-product-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+}
+
+.zzz-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zzz-product-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.zzz-product-name {
+    font-size: 0.875rem;
+    color: #fff;
+    margin: 0;
+    height: 3em;
+    overflow: hidden;
+    line-height: 1.5em;
+}
+
+.zzz-product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #F2D600;
+}
+
+.zzz-order-card {
+    border: 2px solid #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zzz-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.zzz-order-id {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.zzz-order-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: 2px solid #000;
+    text-transform: uppercase;
+}
+
+.zzz-status-confirmed {
+    background-color: #00E5FF;
+    color: #000;
+}
+
+.zzz-status-shipped {
+    background-color: #F2D600;
+    color: #000;
+}
+
+.zzz-status-delivered {
+    background-color: #00FF88;
+    color: #000;
+}
+
+.zzz-status-pending {
+    background-color: #FF0055;
+    color: #fff;
+}
+
+.zzz-order-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.zzz-detail-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.zzz-detail-label {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.zzz-detail-value {
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.zzz-order-items {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border: 2px solid #fff;
+    margin-bottom: 1rem;
+}
+
+.zzz-order-item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+    color: #fff;
+}
+
+.zzz-order-item-row:last-child {
+    border-bottom: none;
+}
+
+.zzz-order-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.zzz-action-link-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #00E5FF;
+    color: #000;
+    border: 2px solid #000;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: skew(-10deg);
+    box-shadow: 4px 4px 0px #000;
+}
+
+.zzz-action-link-button:hover {
+    transform: skew(-10deg) translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+.zzz-action-link-button.secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.zzz-action-link-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.zzz-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.zzz-timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.zzz-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.75rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF0055;
+    border: 2px solid #fff;
+}
+
+.zzz-timeline-item.completed::before {
+    background-color: #00E5FF;
+}
+
+.zzz-timeline-title {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.zzz-timeline-date {
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+.zzz-policy-content {
+    line-height: 1.6;
+    color: #fff;
+}
+
+.zzz-policy-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zzz-policy-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #F2D600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.zzz-policy-section p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.zzz-policy-list {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.zzz-policy-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.zzz-empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #aaa;
+    border: 2px solid #333;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.zzz-empty-state p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .zzz-cart-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .zzz-cart-summary {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .zzz-cart-item {
+        grid-template-columns: 60px 1fr;
+        gap: 1rem;
+    }
+
+    .zzz-item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .zzz-product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+
+    .zzz-product-image-wrapper {
+        height: 160px;
+    }
+
+    .zzz-checkout-button {
+        width: 100%;
+    }
+
+    .zzz-nav-tabs {
+        gap: 0.25rem;
+    }
+
+    .zzz-nav-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .zzz-order-details {
+        grid-template-columns: 1fr;
+    }
+}
