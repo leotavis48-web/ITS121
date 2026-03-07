@@ -2,52 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap Header</title>
+    <title>Account Settings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <main class="zzz-account-frame">
-        <section class="zzz-section">
-		            <zlass="zzz-account-heading">Profile Settings</h1>
-            <div class="zzz-account-split-row">
-                <article class="zzz-text-content">
-                    <div class="zzz-field">
-                        <label>Display Name</label>
-                        <input type="text" placeholder="Username" class="zzz-input">
-                    </div>
-                    <div class="zzz-field">
-                        <label>Bio</label>
-                        <textarea placeholder="About you..." class="zzz-input"></textarea>
-                    </div>
-                    <button class="zzz-primary-btn">Save Changes</button>
-                </article>
-            <h1 class="zzz-account-heading">Personalization Settings</h1>
-            
-            <div class="zzz-personalization-container">
-                <article class="zzz-text-content">
-                    <ul class="zzz-nav-list">
-                        <li class="zzz-nav-item">
-                            <span>Dark Mode</span>
-                            <input type="checkbox" checked>
-                        </li>
-                        <li class="zzz-nav-item">
-                            <span>Active Status</span>
-                            <input type="checkbox">
-                        </li>
-                        <li class="zzz-nav-item">
-                            <span>Notifications</span>
-                            <input type="checkbox" checked>
-                        </li>
-                    </ul>
-                    <button class="zzz-primary-btn">Apply Settings</button>
-                </article>
-            </div>
-        </section>
-    </main>
+<main class="zzz-account-frame">
+
+    <!-- Profile Settings -->
+    <section class="zzz-section">
+
+        <h1 class="zzz-account-heading">Profile Settings</h1>
+
+        <div class="zzz-account-split-row">
+            <article class="zzz-text-content">
+
+                <div class="zzz-field">
+                    <label>Display Name</label>
+                    <input type="text" placeholder="Username" class="zzz-input">
+                </div>
+
+                <div class="zzz-field">
+                    <label>Bio</label>
+                    <textarea placeholder="About you..." class="zzz-input"></textarea>
+                </div>
+
+
+            </article>
+        </div>
+
+    </section>
+
+
+    <!-- Personalization Settings -->
+    <section class="zzz-section">
+
+        <div class="zzz-personalization-container">
+            <article class="zzz-text-content">
+
+                <ul class="zzz-nav-list">
+
+                    <li class="zzz-nav-item">
+                        <span>Dark Mode</span>
+                        <input type="checkbox" checked>
+                    </li>
+
+                    <li class="zzz-nav-item">
+                        <span>Active Status</span>
+                        <input type="checkbox">
+                    </li>
+
+                    <li class="zzz-nav-item">
+                        <span>Notifications</span>
+                        <input type="checkbox" checked>
+                    </li>
+
+                </ul>
+
+                <button class="zzz-primary-btn">Apply Settings</button>
+
+            </article>
+        </div>
+
+    </section>
+
+</main>
 
 </body>
 </html>
