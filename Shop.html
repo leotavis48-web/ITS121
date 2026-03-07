@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark zzz-navbar fixed-top">
+        <div class="container-fluid">
+
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand me-3" href="#">
+                    <img src="Assets/zzz.png" alt="Logo" class="zzz-img">
+                </a>
+
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-row">
+                    <li class="nav-item me-3">
+                         <a class="nav-link active zzz-hbtn" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link zzz-hbtn" href="About-us.html">About</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link zzz-hbtn" href="Shop.html">Shop</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center ms-auto">
+                <a href="#" class="btn btn-outline-light me-2">Sign In</a>
+                <a href="#" class="btn btn-outline-light">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+</header>
 
     <body>
 
         <main class="zzz-main">
+
+            
 
             <section class="zzz-recommended-section">
                 <h2 class="zzz-page-heading">Recommended Items</h2>
@@ -63,27 +101,125 @@
                 </form>
             </section>
 
-            <section class="zzz-search-results">
-                <h2 class="zzz-page-heading">Search Results</h2>
-
-                <div class="zzz-recommended-grid">
-
-                    <div class="zzz-recommended-item">
-                        <img src="https://via.placeholder.com/300x200" alt="">
-                        <p>A fabric i made</p>
-                        <p>$59.99</p>
+        <section class="zzz-recommendations-section">
+            <h2 class="zzz-section-title">Search Results</h2>
+            <div class="zzz-product-grid">
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-197898.jpg" alt="Product 1" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Evelyn Chevalier 1/7 Complete Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">25,060 <span class="zzz-currency">JPY</span></p>
                     </div>
+                </article>
 
-                    <div class="zzz-recommended-item">
-                        <img src="https://via.placeholder.com/300x200" alt="">
-                        <p>Overprices Plushie</p>
-                        <p>$99.99</p>
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-198226.jpg" alt="Product 2" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Nendoroid Zenless Zone Zero Hugo Vlad(Pre-order)</h3>
+                        <p class="zzz-product-price">1,900 <span class="zzz-currency">JPY</span></p>
                     </div>
+                </article>
 
-                </div>
-            </section>
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-198080.jpg" alt="Product 3" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">HELLO! GOOD SMILE Zenless Zone Zero Nicole Demara Posable Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">25,980 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/243/FIGURE-175711.jpg" alt="Product 4" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Nicole Demara 1/7 Complete Figure(Released)</h3>
+                        <p class="zzz-product-price">28,210 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-198082.jpg" alt="Product 5" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">HELLO! GOOD SMILE Zenless Zone Zero Nekomiya Mana Posable Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">22,630 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/251/FIGURE-183217.jpg" alt="Product 6" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Corin Wickes 1/7 Complete Figure(Released)</h3>
+                        <p class="zzz-product-price">25,900 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/254/FIGURE-196338.jpg" alt="Product 7" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Gift+ Zenless Zone Zero Asaba Harumasa Sparkling Wonderland Ver. 1/8 Complete Figure(Pre-order)</h3>
+                        <p class="zzz-product-price">1,800 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/252/FIGURE-187260.jpg" alt="Product 8" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Nendoroid Zenless Zone Zero Von Lycaon(Pre-order)</h3>
+                        <p class="zzz-product-price">5,980 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/261/FIGURE-196695.jpg" alt="Product 9" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">Nendoroid Zenless Zone Zero Seth Lowell(Pre-order)</h3>
+                        <p class="zzz-product-price">5,850 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+
+                <article class="zzz-product-card">
+                    <figure class="zzz-product-image-wrapper">
+                        <img src="https://img.amiami.com/images/product/main/244/FIGURE-179736.jpg" alt="Product 10" class="zzz-product-image">
+                    </figure>
+                    <div class="zzz-product-info">
+                        <h3 class="zzz-product-name">[Bonus] Zenless Zone Zero Nekomiya Mana 1/7 Complete Figure(Released)</h3>
+                        <p class="zzz-product-price">27,500 <span class="zzz-currency">JPY</span></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        </section>
 
         </main>
+
+        <footer class="zzz-footer bg-black text-white py-4 mt-auto w-100">
+  <div class="container-fluid text-center">
+    <div class="d-flex justify-content-center">
+      <a href="https://www.facebook.com/ZZZ.Official.EN/" class="text-white mx-3 fs-4"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/ZZZ_EN" class="text-white mx-3 fs-4"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/zzz.official.en/" class="text-white mx-3 fs-4"><i class="fab fa-instagram"></i></a>
+      <a href="https://discord.com/invite/zenlesszonezero" class="text-white mx-3 fs-4"><i class="fab fa-discord"></i></a>
+    </div>
+    <div class="mt-3">&copy; Copyright © COGNOSPHERE. All Rights Reserved.</div>
+  </div>
+</footer>
 
     </body>
 </html>
