@@ -988,7 +988,7 @@ body {
    =================================== */
 /* Account settings main frame with enhanced styling */
 .zzz-account-frame {
-    border: 3px solid #F2D600;
+    border: 3px solid #FFFFFF;
     padding: 40px;
     max-width: 900px;
     margin: 40px auto;
@@ -1006,7 +1006,7 @@ body {
     margin-bottom: 25px;
     font-size: 2rem;
     font-weight: bold;
-    color: #F2D600;
+    color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -1027,7 +1027,7 @@ body {
 
 /* Personalization settings container with enhanced styling */
 .zzz-personalization-container {
-    border: 2px solid #00E5FF;
+    border: 2px solid #FFFFFF;
     padding: 30px;
     background: rgba(0, 229, 255, 0.05);
     box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
