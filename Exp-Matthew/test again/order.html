@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - Order Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <main class="zzz-cart-container">
         <nav class="zzz-nav-tabs" role="tablist">
             <button class="zzz-nav-tab active" data-tab="shopping-cart">Shopping Cart</button>
+            <button class="zzz-nav-tab" data-tab="checkout">Checkout</button>
             <button class="zzz-nav-tab" data-tab="order-confirmation">Order Confirmation</button>
             <button class="zzz-nav-tab" data-tab="order-tracking">Order Tracking</button>
             <button class="zzz-nav-tab" data-tab="order-history">Order History</button>
@@ -33,10 +35,6 @@
                 </div>
             </div>
 
-            <div class="zzz-checkout-section">
-                <button class="zzz-checkout-button">PROCEED TO CHECKOUT</button>
-            </div>
-
             <div class="zzz-cart-items">
                 <article class="zzz-cart-item">
                     <img src="https://img.amiami.com/images/product/main/261/FIGURE-197897.jpg" alt="Zenless Zone Zero Figure" class="zzz-item-image">
@@ -54,12 +52,12 @@
                         </div>
                         <div class="zzz-item-actions">
                             <div class="zzz-quantity-selector">
+                                <button class="zzz-quantity-btn"><i class="fa-solid fa-minus" style="color: rgb(255, 0, 0);"></i></button>
                                 <span class="zzz-quantity-label">Qty:</span>
                                 <span class="zzz-quantity-value">1</span>
+                                <button class="zzz-quantity-btn"><i class="fa-solid fa-plus" style="color: rgb(0, 255, 164);"></i></button>
                             </div>
-                            <button class="zzz-action-button">Delete</button>
-                            <button class="zzz-action-button">Save for later</button>
-                            <button class="zzz-action-button">Add to Bookmarks</button>
+                            <button class="zzz-action-button"><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
                 </article>
@@ -80,12 +78,12 @@
                         </div>
                         <div class="zzz-item-actions">
                             <div class="zzz-quantity-selector">
+                                <button class="zzz-quantity-btn"><i class="fa-solid fa-minus" style="color: rgb(255, 0, 0);"></i></button>
                                 <span class="zzz-quantity-label">Qty:</span>
                                 <span class="zzz-quantity-value">1</span>
+                                <button class="zzz-quantity-btn"><i class="fa-solid fa-plus" style="color: rgb(0, 255, 164);"></i></button>
                             </div>
-                            <button class="zzz-action-button">Delete</button>
-                            <button class="zzz-action-button">Save for later</button>
-                            <button class="zzz-action-button">Add to Bookmarks</button>
+                            <button class="zzz-action-button"><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
                 </article>
@@ -196,6 +194,78 @@
                 </article>
             </div>
         </section>
+        </section>
+
+        <section class="zzz-tab-content" id="checkout">
+            <div class="zzz-checkout-page">
+                <h1 class="zzz-checkout-title">Checkout</h1>
+
+                <div class="zzz-checkout-grid">
+                    <div class="zzz-checkout-form">
+                        <div class="zzz-form-section">
+                            <h3>Shipping Address</h3>
+                            <div class="zzz-form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your full name">
+                            </div>
+                            <div class="zzz-form-group">
+                                <label>Address</label>
+                                <input type="text" placeholder="Street address">
+                            </div>
+                            <div class="zzz-form-row">
+                                <div class="zzz-form-group">
+                                    <label>City</label>
+                                    <input type="text" placeholder="City">
+                                </div>
+                                <div class="zzz-form-group">
+                                    <label>Postal Code</label>
+                                    <input type="text" placeholder="Postal code">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="zzz-form-section">
+                            <h3>Payment Method</h3>
+                            <div class="zzz-payment-options">
+                                <label class="zzz-payment-option">
+                                    <input type="radio" name="payment" checked>
+                                    <span>Credit Card</span>
+                                </label>
+                                <label class="zzz-payment-option">
+                                    <input type="radio" name="payment">
+                                    <span>PayPal</span>
+                                </label>
+                                <label class="zzz-payment-option">
+                                    <input type="radio" name="payment">
+                                    <span>Bank Transfer</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="zzz-order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="zzz-summary-row">
+                            <span>Subtotal (2 items)</span>
+                            <span>40,670 JPY</span>
+                        </div>
+                        <div class="zzz-summary-row">
+                            <span>Shipping</span>
+                            <span>2,500 JPY</span>
+                        </div>
+                        <div class="zzz-summary-row">
+                            <span>Tax</span>
+                            <span>4,317 JPY</span>
+                        </div>
+                        <div class="zzz-summary-divider"></div>
+                        <div class="zzz-summary-row zzz-summary-total">
+                            <span>Total</span>
+                            <span>47,487 JPY</span>
+                        </div>
+                        <button class="zzz-place-order-button">PLACE ORDER</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="zzz-tab-content" id="order-confirmation">
