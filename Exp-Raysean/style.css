@@ -11,15 +11,15 @@ body {
     padding-top: 100px;
     margin: 0;
     background-color: #0a0a0a;
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;    
-    font-family: 'Oswald', sans-serif; /* Changed to Oswald */
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
     color: white;
 }
 
@@ -47,7 +47,7 @@ body {
     padding: 8px 32px !important;
     text-align: center;
     display: inline-block !important;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -69,7 +69,7 @@ body {
     margin: 0;
     padding: 20px 0;
     text-align: center;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-social {
@@ -78,7 +78,7 @@ body {
     font-size: 1.5rem;
     transition: 0.3s;
     display: inline-block;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-social:hover {
@@ -94,7 +94,7 @@ body {
     padding: 20px;
     border: 1px solid #000;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-header-nav nav {
@@ -119,7 +119,7 @@ body {
     padding-top: 100px;
     padding: 12px;
     border: 1px solid black;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Search Section */
@@ -127,7 +127,7 @@ body {
     border: 1px solid #000;
     padding: 20px;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-search-section form {
@@ -138,13 +138,13 @@ body {
     width: 100%;
     padding: 10px;
     border: 1px solid #000;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-search-section label {
     display: block;
     margin-bottom: 10px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Featured Section */
@@ -153,7 +153,7 @@ body {
     gap: 20px;
     min-height: 300px;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-featured-article {
@@ -162,12 +162,12 @@ body {
     width: 100%;
     border: 1px solid #000;
     padding: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-featured-content {
     flex: 1;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-featured-figure {
@@ -178,7 +178,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-featured-figure img {
@@ -191,7 +191,7 @@ body {
     border: 1px solid #000;
     padding: 20px;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-carousel-grid {
@@ -204,7 +204,7 @@ body {
 .zzz-carousel-item {
     border: 1px solid #000;
     padding: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-carousel-item img {
@@ -221,20 +221,20 @@ body {
 .zzz-main-frame {
     border: 1px solid #000;
     padding: 40px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-page-heading {
     margin-bottom: 20px;
     font-size: 2rem;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-split-row {
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-image-placeholder {
@@ -259,7 +259,7 @@ body {
 .zzz-text-content {
     font-size: 14px;
     line-height: 1.4;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-game-button {
@@ -270,13 +270,13 @@ body {
     background: white;
     padding: 5px 10px;
     font-size: 12px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-section-split {
     border-top: 1px solid #000;
     padding-top: 30px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 /* img hover */
@@ -310,7 +310,7 @@ body {
     border: 1px solid #000;
     padding: 20px;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-recommended-grid {
@@ -324,7 +324,7 @@ body {
     border: 1px solid #000;
     padding: 20px;
     text-align: center;
-    font-family: 'Oswald', sans-serif; /* Added Oswald */
+    font-family: 'Oswald', sans-serif;
 }
 
 .zzz-recommended-item img {
@@ -511,19 +511,18 @@ body {
 }
 
 .zzz-carousel-viewport {
-    overflow: hidden; 
+    overflow: hidden;
     width: 100%;
 }
 
 .zzz-carousel-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.4s ease-in-out; 
+    transition: transform 0.4s ease-in-out;
 }
 
 .zzz-carousel-item {
-    /* Auto-sizes each item so 4 fit perfectly with 3 gaps of 20px */
-    flex: 0 0 calc((100% - 60px) / 4); 
+    flex: 0 0 calc((100% - 60px) / 4);
     border: 1px solid #000;
     padding: 20px;
     text-align: center;
@@ -913,12 +912,16 @@ grid-template-columns:1fr;
     font-weight: normal;
 }
 
-/*ACCOUNT TEST*/
-.zzz-account-frame { 
+/* PROFILE SETTINGS */
+.zzz-account-frame {
     border: 1px solid #000;
     padding: 40px;
-    max-width: 900px; 
-    margin: 0 auto;  
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.zzz-section {
+    margin-bottom: 40px;
 }
 
 .zzz-account-heading {
@@ -936,13 +939,13 @@ grid-template-columns:1fr;
 .zzz-login-container {
     border: 1px solid #000;
     padding: 30px;
-    max-width: 450px; 
+    max-width: 450px;
 }
 
 .zzz-personalization-container {
     border: 1px solid #000;
     padding: 30px;
-    max-width: 500px; 
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .zzz-image-placeholder {
@@ -966,13 +969,36 @@ grid-template-columns:1fr;
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #fff;
 }
 
 .zzz-input {
-    border: 1px solid #000;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
     padding: 10px;
     width: 100%;
     font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.zzz-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.zzz-input:focus {
+    outline: none;
+    border-color: #F2D600;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+select.zzz-input {
+    cursor: pointer;
+}
+
+select.zzz-input option {
+    background: #000;
+    color: #fff;
 }
 
 textarea.zzz-input {
@@ -990,24 +1016,29 @@ textarea.zzz-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid #333;
     padding-bottom: 10px;
-    max-width: 400px; 
+    max-width: 400px;
 }
 
-.zzz-primary-btn, 
+.zzz-primary-btn,
 .zzz-secondary-btn {
-    border: 1px solid #000;
-    background: white;
-    padding: 8px 15px;
+    border: 2px solid #fff;
+    background: #000;
+    color: #fff;
+    padding: 12px 24px;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s;
 }
 
 .zzz-primary-btn:hover {
-    background: #000;
-    color: #fff;
+    background: #F2D600;
+    color: #000;
+    border-color: #F2D600;
 }
 
 .zzz-button-group {
@@ -1021,4 +1052,17 @@ textarea.zzz-input {
     left: 10px;
 }
 
+/* Responsive for Account Settings */
+@media(max-width:768px){
+    .zzz-account-frame {
+        padding: 20px;
+    }
 
+    .zzz-account-split-row {
+        flex-direction: column;
+    }
+
+    .zzz-personalization-container {
+        max-width: 100%;
+    }
+}
