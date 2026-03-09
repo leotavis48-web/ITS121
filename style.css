@@ -2242,3 +2242,94 @@ body {
         position: static;
     }
 }
+
+
+/* RaySean */
+
+.zzz-account-frame {
+    border: 3px solid #FFFFFF;
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px rgba(242, 214, 0, 0.3);
+}
+
+/* Section container */
+.zzz-section {
+    margin-bottom: 40px;
+}
+
+/* Account page heading */
+.zzz-account-heading {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Split row layout for account pages */
+.zzz-account-split-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.zzz-field {
+    margin-bottom: 20px;
+}
+
+.zzz-primary-btn,
+.zzz-secondary-btn {
+    border: 2px solid #fff;
+    background: #000;
+    color: #fff;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s;
+}
+
+/* Primary button hover effect */
+.zzz-primary-btn:hover {
+    background: #F2D600;
+    color: #000;
+    border-color: #F2D600;
+    box-shadow: 0 0 15px rgba(242, 214, 0, 0.5);
+}
+
+/* Button group container */
+.zzz-button-group {
+    display: flex;
+    gap: 15px;
+}
+
+/* Input fields styling */
+.zzz-input {
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s;
+}
+
+/* Input placeholder styling */
+.zzz-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Input focus state */
+.zzz-input:focus {
+    outline: none;
+    border-color: #F2D600;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(242, 214, 0, 0.3);
+}
