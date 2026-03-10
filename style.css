@@ -8,13 +8,8 @@
     box-sizing: border-box;
 }
 
-/* HTML and Body Layout */
-html {
-    height: 100%;
-}
-
+/* Body Styles */
 body {
-    min-height: 100vh;
     padding-top: 100px;
     margin: 0;
     background-color: #0a0a0a;
@@ -24,13 +19,10 @@ body {
     background-size: 40px 40px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: 'Oswald', sans-serif;
     color: white;
-}
-
-/* Main Content Area */
-main {
-    flex: 1 0 auto;
 }
 
 /* Navbar */
@@ -75,34 +67,19 @@ main {
 
 /* Footer */
 .zzz-footer {
-    flex-shrink: 0;
     background-color: #000;
     color: #fff;
     width: 100%;
     margin: 0;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    border-top: 2px solid #333;
-    margin-top: 3rem;
-}
-
-.zzz-footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.zzz-social-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
 }
 
 /* Social Media Icons */
 .zzz-social {
     color: white;
+    margin: 0 10px;
     font-size: 1.5rem;
     transition: 0.3s;
     display: inline-block;
@@ -112,13 +89,6 @@ main {
 .zzz-social:hover {
     color: #fff;
     text-shadow: 0 0 8px white;
-    transform: translateY(-3px);
-}
-
-.zzz-copyright {
-    font-size: 0.9rem;
-    color: #aaa;
-    letter-spacing: 1px;
 }
 
 /* Header Layout */
@@ -578,7 +548,6 @@ main {
     max-width:1200px;
     width:100%;
     padding:2rem;
-    margin: 0 auto;
 }
 
 /* Navigation Tabs */
@@ -1054,7 +1023,6 @@ main {
     border: 2px solid #fff;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 3rem;
 }
 
 /* Section Title */
@@ -1422,14 +1390,6 @@ main {
     .zzz-cart-summary {
         width: 100%;
         justify-content: space-between;
-    }
-
-    .zzz-social-links {
-        gap: 20px;
-    }
-
-    .zzz-social {
-        font-size: 1.3rem;
     }
 }
 
