@@ -26,29 +26,24 @@ prevBtn.addEventListener('click', () => {
 });
 
 function moveCarousel() {
-    // 1. Get the current width of a single item
+
     const item = document.querySelector('.zzz-carousel-item');
     const itemWidth = item.offsetWidth;
     
-    // 2. The gap must match the gap in your CSS (.zzz-carousel-track { gap: 20px; })
     const gap = 20; 
     
-    // 3. Calculate the distance to shift exactly 4 items
     const shiftAmount = (itemWidth + gap) * 4; 
     
-    // 4. Apply the CSS transform to slide the track
     track.style.transform = `translateX(-${currentPage * shiftAmount}px)`;
 }
 
 function updateButtons() {
-    // Disable Prev button if we are on the first page
     if (currentPage === 0) {
         prevBtn.disabled = true;
     } else {
         prevBtn.disabled = false;
     }
 
-    // Disable Next button if we are on the last page
     if (currentPage === maxPages) {
         nextBtn.disabled = true;
     } else {
